@@ -129,3 +129,72 @@ export const ImageArrwBack = styled.img`
   border-radius: 4rem 0 0 4rem;
   left: 0;
 `;
+
+export const MediaQuery = styled.div`
+  width: 22.4rem;
+  @media (max-width: 393px) {
+    .navigationButtonSelection {
+      width: 22rem;
+      height: 5.4rem;
+    }
+
+    .titleButtonsBackFront {
+      width: 22.8rem;
+    }
+
+    .imageGroup {
+      display: flex;
+      flex-direction: row;
+      width: 22.813rem;
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    .buttonGroup {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-right: 1rem;
+      border-radius: 50rem;
+      cursor: pointer;
+    }
+
+    .imagem {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-right: 1rem;
+      border-radius: 4rem;
+      transition: filter 0.3s ease;
+    }
+
+    .arrwBackButton {
+      position: absolute;
+      width: 4.6rem;
+      height: 5.4rem;
+      left: 0;
+      margin-top: -0.5rem;
+      border-radius: 4rem 0 0 4rem;
+    }
+
+    .imageArrwBack {
+      position: relative;
+      width: 4.5rem;
+      height: 5.4rem;
+      border-radius: 4rem 0 0 4rem;
+      left: 0;
+    }
+
+    .arrwForwardButton {
+      width: 4.6rem;
+      height: 5.4rem;
+      right: 0;
+      margin-top: -0.5rem;
+      border-radius: 0 4rem 4rem 0;
+    }
+
+    .imageArrwForward {
+      width: 4.5rem;
+      height: 5.4rem;
+      border-radius: 0 4rem 4rem 0;
+    }
+  }
+`;

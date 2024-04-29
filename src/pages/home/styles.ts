@@ -1,6 +1,5 @@
 import { Grid } from "@mui/material";
 import styled from "styled-components";
-//import { COLORS } from '../../themes/colors';
 
 export const Container = styled.div`
   height: 100vh;
@@ -31,4 +30,24 @@ export const SubCardsGrid = styled(Grid)`
   grid-template-rows: auto auto;
   padding: 0 0rem 1rem 0;
   gap: 1rem;
+`;
+
+export const MediaQuery = styled.div`
+  @media (max-width: 393px) {
+    .gridBody {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      padding: 0 1rem 1rem 1rem;
+      gap: 1rem;
+    }
+
+    .subCardsGrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      padding: 0 0rem 1rem 0;
+      gap: 1rem;
+    }
+  }
 `;

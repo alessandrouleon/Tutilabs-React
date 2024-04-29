@@ -27,7 +27,7 @@ export const StyledDivider = styled(Divider)({
 });
 
 export const TextInformation = styled(Typography)`
-text-align: start;
+  text-align: start;
   padding: 1rem;
   color: ${COLORS.BLACK_COLOR};
   font-family: "Poppins", sans-serif;
@@ -40,4 +40,16 @@ export const Image = styled.img`
   height: 13rem;
   margin: 0;
   border-radius: 4rem;
+`;
+
+export const MediaQuery = styled.div`
+  padding: 1rem 0 0 0;
+  margin: 0;
+  width: 22.3rem;
+  @media (max-width: 393px) {
+    .textInformation {
+      text-align: start;
+      padding: 1rem;
+    }
+  }
 `;

@@ -7,6 +7,7 @@ import {
     ImageArrwBack,
     ImageArrwForward,
     ImageGroup,
+    MediaQuery,
     NavigationButtonSelection, Title, VectorImage
 } from "./styles";
 import VectorLight from "../../assets/VectorLight.png";
@@ -17,6 +18,7 @@ import { arrayA, arrayB, ImageProps } from '../../utils/imageTechnology';
 import { useEffect, useRef, useState } from "react";
 import { COLORS } from "../../themes/colors";
 import { useItemContext } from '../../context/ItemContext'; 
+import { Box } from "@mui/material";
 
 export function TechnologyButton() {
     const [currentArray, setCurrentArray] = useState<ImageProps[]>([]);
@@ -76,7 +78,9 @@ export function TechnologyButton() {
 
 
     return (
+        <MediaQuery>
         <Container>
+            <Box  className="titleButtonsBackFront">   
             <Title fontWeight="bold">Tipo de teste</Title>
             <ButtonGroup>
                 <ButtonAction
@@ -101,22 +105,34 @@ export function TechnologyButton() {
                 </ButtonAction>
 
             </ButtonGroup>
-            <NavigationButtonSelection id="container" ref={containerRef}>
-                <ImageGroup>
+            </Box>
+            <NavigationButtonSelection
+             id="container" 
+             ref={containerRef}
+             className="navigationButtonSelection"
+             >
+                <ImageGroup className="imageGroup">
                     {!isStateScrollLeft && !isStateScrollRight || clickCount == 0 ? null :
                         <ArrwBackButton
+                        className="arrwBackButton"
                             type="button"
                             value={clickCount}
                             onClick={handleScrollLeft}
                         >
-                            <ImageArrwBack src={ArrowBack} alt="ArrowBack" />
+                            <ImageArrwBack 
+                            className="imageArrwBack"
+                            src={ArrowBack} alt="ArrowBack" />
                         </ArrwBackButton>
                     }
                     {currentArray.length > 0 ? (
                         currentArray.map((item) => (
                             <div key={item.id}>
-                                <ButtonImageGroup onClick={() => handleItemClick(item.name, item.description)}>
-                                    <Image src={item.image_url} alt={item.name} />
+                                <ButtonImageGroup className="buttonGroup" onClick={() => handleItemClick(item.name, item.description)}>
+                                    <Image 
+                                     src={item.image_url}
+                                      alt={item.name}
+                                      className="imagem"
+                                      />
                                 </ButtonImageGroup>
                             </div>
 
@@ -124,15 +140,19 @@ export function TechnologyButton() {
                     ) : (<p>Selecione um botão para exibir</p>)}
                     {!isStateScrollRight && !isStateScrollLeft || clickCount === 0 ?
                         <ArrwForwardButton
+                        className="arrwForwardButton"
                             type="button"
                             value={clickCount}
                             onClick={handleScrollRight}
                         >
-                            <ImageArrwForward src={ArrowForward} alt="ArrwForward" />
+                            <ImageArrwForward 
+                            className="imageArrwForward"
+                            src={ArrowForward} alt="ArrwForward" />
                         </ArrwForwardButton>
                         : null}
                 </ImageGroup>
             </NavigationButtonSelection>
         </Container>
+        </MediaQuery>
     );
 }

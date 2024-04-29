@@ -4,15 +4,16 @@ import { InformtionCard } from "../../components/informationCard";
 import { SeeWebsite } from "../../components/seeWebsite";
 import { TechnologyButton } from "../../components/technologyButton";
 import { WelcomeTutilabs } from "../../components/welcomeTutilabs";
-import { Container, GridBody, HeaderHome, CardGrid, SubCardsGrid } from "./styles";
+import { Container, GridBody, HeaderHome, CardGrid, SubCardsGrid, MediaQuery } from "./styles";
 
 export function Home() {
     return (
+        <MediaQuery>
         <Container>
             <HeaderHome>
                 <Header />
             </HeaderHome>
-            <GridBody>
+            <GridBody className="gridBody">
                 <CardGrid>
                     <WelcomeTutilabs />
                 </CardGrid>
@@ -22,11 +23,12 @@ export function Home() {
                 <CardGrid>
                     <TechnologyButton />
                 </CardGrid>
-                <SubCardsGrid>
+                <SubCardsGrid className="subCardsGrid">
                     <InformtionCard />
                     <SeeWebsite />
                 </SubCardsGrid>
             </GridBody>
         </Container>
+        </MediaQuery>
     );
 }

@@ -95,3 +95,45 @@ export const VectorImage = styled.img`
   width: 1rem;
   height: 1rem;
 `;
+
+export const MediaQuery = styled.div`
+   @media (max-width: 393px) {
+    width: 22.3rem;
+    border: solid 1px blue;
+    background: ${COLORS.PORPLE_DARK};
+    border-radius: 1.5rem;
+    border: none;
+
+    .backgroundImageGrid {
+      width: 22.3rem;
+      height: 18.875rem;
+    }
+
+    .imageGrad {
+      width: 22.3rem;
+      height: 15.424rem;
+    }
+
+    .nformationSeeWebsite {
+      margin: 0;
+      padding: 1rem;
+      position: absolute;
+      width: 22.3rem;
+      height: 7.563rem;
+      bottom: 0;
+    }
+
+    .more-about-website {
+      display: flex;
+      width: 19.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonView {
+      height: 2.1rem;
+      margin-top: 0rem;
+      left: 23%;
+    }
+  }
+`;

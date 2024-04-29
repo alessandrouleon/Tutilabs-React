@@ -33,3 +33,20 @@ export const HandImage = styled.img`
   isolation: isolate;
   animation: ${waveAnimation} 2s ease-in-out infinite;
 `;
+
+export const MedyaQuery = styled.div`
+  @media (max-width: 393px) {
+    .title {
+      font-size: 3.5rem;
+    }
+
+    .subtitle {
+      width: 393px;
+      font-weight: 400;
+      font-size: 0.8rem;
+      text-align: justify;
+      word-wrap: break-word;
+      padding-right: 2rem;
+    }
+  }
+`;

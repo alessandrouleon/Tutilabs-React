@@ -43,3 +43,39 @@ export const Image = styled.img`
   height: 23.617rem;
   z-index: 3;
 `;
+
+export const MediaQuery = styled.div`
+  @media (max-width: 393px) {
+    .containerBackground {
+      width: 365px;
+      padding-right: 2rem;
+    }
+
+    .title {
+      font-size: 1.8rem;
+    }
+
+    .imagemRabbit {
+      margin-left: auto;
+      position: absolute;
+      top: auto;
+      right: 0.6rem;
+      bottom: 0.2rem;
+      width: 14.824rem;
+      height: 13.617rem;
+      z-index: 3;
+    }
+
+    .triangleBackground {
+      position: relative;
+      width: 0;
+      height: 0;
+      margin-top: calc(5vw);
+      border-style: solid;
+      border-width: calc(25vw) 0 0 calc(93vw);
+      border-color: transparent transparent transparent ${COLORS.ORANGE_LIGHT};
+      border-radius: 0 0 1.5rem 1.5rem;
+      z-index: 2;
+    }
+  }
+`;

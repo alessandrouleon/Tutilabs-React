@@ -72,27 +72,47 @@ export const ImageGroup = styled.div`
   display: flex;
   flex-direction: row;
   width: 33.875rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 0;
 `;
 
 export const Image = styled.img`
-  width: 6.188rem;
-  height: 6.188rem;
-  margin-right: 1rem;
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+  border-radius: 4rem;
 `;
 
-export const ImageArrwForward = styled.img`
+export const ArrwForwardButton = styled.button`
   position: absolute;
   width: 6.75rem;
   height: 7.063rem;
   right: 0;
- margin-top: -0.5rem;
+  margin-top: -0.5rem;
+  border-radius: 0 4rem 4rem 0;
 `;
 
-export const ImageArrwBack = styled.img`
+export const ImageArrwForward = styled.img`
+  position: relative;
+  width: 6.75rem;
+  height: 7.063rem;
+  right: 0;
+  border-radius: 0 4rem 4rem 0;
+`;
+
+export const ArrwBackButton = styled.button`
   position: absolute;
   width: 6.75rem;
   height: 7.063rem;
   left: 0;
- margin-top: -0.5rem;
+  margin-top: -0.5rem;
+  border-radius: 4rem 0 0 4rem;
+`;
+
+export const ImageArrwBack = styled.img`
+  position: relative;
+  width: 6.75rem;
+  height: 7.063rem;
+  border-radius: 4rem 0 0 4rem;
+  left: 0;
 `;

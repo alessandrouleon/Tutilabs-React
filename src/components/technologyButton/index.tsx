@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
+    ArrwBackButton,
+    ArrwForwardButton,
     ButtonAction, ButtonGroup, Container,
     Image,
     ImageArrwBack,
@@ -11,15 +14,45 @@ import VectorBlack from "../../assets/VectorBlack.png";
 import ArrowForward from "../../assets/ArrowForward.png";
 import ArrowBack from "../../assets/ArrowBack.png";
 import { arrayA, arrayB, ImageProps } from '../../utils/imageTechnology';
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { COLORS } from "../../themes/colors";
-
-
 
 export function TechnologyButton() {
     const [currentArray, setCurrentArray] = useState<ImageProps[]>([]);
     const [selectedButton, setSelectedButton] = useState<'A' | 'B'>('A');
+    const containerRef = useRef<HTMLDivElement>(null);
 
+    const [scrollPosition, setScrollPosition] = useState<number>(0);
+    const [clickCount, setClickCount] = useState(0);
+    const [isStateScrollRight, setIsStateScrollRight] = useState(false);
+    const [isStateScrollLeft, setIsStateScrollLeft] = useState(false);
+
+
+    const handleScrollLeft = () => {
+        if (clickCount >= arrayB.length || clickCount < arrayB.length + 1 || clickCount < arrayB.length + 2) {
+            if (containerRef.current) {
+                containerRef.current.scrollLeft -= 100;
+                setScrollPosition(containerRef.current.scrollLeft);
+                setClickCount(clickCount - 3);
+            }
+        }
+        else {
+            setIsStateScrollLeft(true);
+        }
+    };
+
+    const handleScrollRight = () => {
+        if (clickCount < arrayA.length || clickCount < arrayA.length + 1 || clickCount < arrayA.length + 2) {
+            if (containerRef.current) {
+                containerRef.current.scrollLeft += 100;
+                setScrollPosition(containerRef.current.scrollLeft);
+                setClickCount(clickCount + 3);
+            }
+        }
+        else {
+            setIsStateScrollRight(true);
+        }
+    };
 
     useEffect(() => {
         setCurrentArray(arrayA);
@@ -61,9 +94,17 @@ export function TechnologyButton() {
                 </ButtonAction>
 
             </ButtonGroup>
-            <NavigationButtonSelection>
+            <NavigationButtonSelection id="container" ref={containerRef}>
                 <ImageGroup>
-                    <ImageArrwBack src={ArrowBack} alt="ArrowBack"  />
+                    {!isStateScrollLeft && !isStateScrollRight || clickCount == 0 ? null :
+                        <ArrwBackButton
+                            type="button"
+                            value={clickCount}
+                            onClick={handleScrollLeft}
+                        >
+                            <ImageArrwBack src={ArrowBack} alt="ArrowBack" />
+                        </ArrwBackButton>
+                    }
                     {currentArray.length > 0 ? (
                         currentArray.map((item) => (
                             <div key={item.id}>
@@ -73,13 +114,21 @@ export function TechnologyButton() {
                             </div>
 
                         ))
-                    ) : (
-                        <p>Selecione um botão para exibir</p>
-                    )}
-                    <ImageArrwForward src={ArrowForward} alt="ArrwForward" />
+                    ) : (<p>Selecione um botão para exibir</p>)}
+                    {!isStateScrollRight && !isStateScrollLeft || clickCount === 0 ?
+                        <ArrwForwardButton
+                            type="button"
+                            value={clickCount}
+                            onClick={handleScrollRight}
+                        >
+                            <ImageArrwForward src={ArrowForward} alt="ArrwForward" />
+                        </ArrwForwardButton>
+                        : null}
                 </ImageGroup>
-                
+
+
             </NavigationButtonSelection>
+            {/* <p>Total de cliques no botão: {clickCount}</p> */}
         </Container>
     );
 }

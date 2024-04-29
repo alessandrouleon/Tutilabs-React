@@ -19,7 +19,7 @@ export type ImageProps = {
   description: string;
   image_url: string;
 };
-export const arrayA: ImageProps[] = [
+export const arrayB: ImageProps[] = [
   {
     id: 1,
     name: "Node.JS",
@@ -59,7 +59,7 @@ export const arrayA: ImageProps[] = [
   },
 ];
 
-export const arrayB: ImageProps[] = [
+export const arrayA: ImageProps[] = [
   {
     id: 1,
     name: "SASS",

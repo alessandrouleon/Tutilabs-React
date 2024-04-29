@@ -50,4 +50,5 @@ export const MediaQuery = styled.div`
       gap: 1rem;
     }
   }
+
 `;

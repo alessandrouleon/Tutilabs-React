@@ -27,7 +27,7 @@ export const TriangleBackground = styled.div`
   height: 0;
   margin-top: calc(5vw);
   border-style: solid;
-  border-width: calc(13vw) 0 0 calc(50vw);
+  border-width: calc(14vw) 0 0 calc(52vw);
   border-color: transparent transparent transparent ${COLORS.ORANGE_LIGHT};
   border-radius: 0 0 1.5rem 1.5rem;
   z-index: 2;

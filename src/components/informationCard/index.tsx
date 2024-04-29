@@ -7,8 +7,6 @@ import { Typography } from "@mui/material";
 export function InformtionCard() {
     const { clickedItemInfo } = useItemContext();
 
-    console.log("NOME DESCRIPTION", clickedItemInfo);
-
     return (
         <MediaQuery>
             <Container>

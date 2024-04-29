@@ -56,6 +56,7 @@ export const VectorImage = styled.img`
 `;
 
 export const NavigationButtonSelection = styled.div`
+  width: 35rem;
   height: 7.063rem;
   margin-top: 2rem;
   padding: 0.5rem 0;
@@ -71,9 +72,8 @@ export const NavigationButtonSelection = styled.div`
 export const ImageGroup = styled.div`
   display: flex;
   flex-direction: row;
-  width: 33.875rem;
+  /* width: 35rem; */
   margin-left: 1rem;
-  margin-right: 0;
 `;
 
 export const Image = styled.img`
@@ -103,6 +103,8 @@ export const ArrwForwardButton = styled.button`
   right: 0;
   margin-top: -0.5rem;
   border-radius: 0 4rem 4rem 0;
+  margin-right: 0;
+  left: 28.5rem;
 `;
 
 export const ImageArrwForward = styled.img`
@@ -189,6 +191,8 @@ export const MediaQuery = styled.div`
       right: 0;
       margin-top: -0.5rem;
       border-radius: 0 4rem 4rem 0;
+      margin-right: 0;
+      left: 18.5rem;
     }
 
     .imageArrwForward {

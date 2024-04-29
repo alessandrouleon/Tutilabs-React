@@ -6,7 +6,7 @@ export const Container = styled.div`
   height: 18.875rem;
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0 0 0;
   background: ${COLORS.PORPLE_DARK};
   border-radius: 1.5rem;
   border: none;

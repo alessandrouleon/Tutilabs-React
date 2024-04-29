@@ -2,7 +2,7 @@
 import {
     ArrwBackButton,
     ArrwForwardButton,
-    ButtonAction, ButtonGroup, Container,
+    ButtonAction, ButtonGroup, ButtonImageGroup, Container,
     Image,
     ImageArrwBack,
     ImageArrwForward,
@@ -115,9 +115,9 @@ export function TechnologyButton() {
                     {currentArray.length > 0 ? (
                         currentArray.map((item) => (
                             <div key={item.id}>
-                                <button onClick={() => handleItemClick(item.name, item.description)}>
+                                <ButtonImageGroup onClick={() => handleItemClick(item.name, item.description)}>
                                     <Image src={item.image_url} alt={item.name} />
-                                </button>
+                                </ButtonImageGroup>
                             </div>
 
                         ))

@@ -81,6 +81,19 @@ export const Image = styled.img`
   height: 6rem;
   margin-right: 2rem;
   border-radius: 4rem;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: brightness(80%);
+  }
+`;
+
+export const ButtonImageGroup = styled.button`
+  width: 6rem;
+  height: 6rem;
+  margin-right: 2rem;
+  border-radius: 50rem;
+  cursor: pointer;
 `;
 
 export const ArrwForwardButton = styled.button`

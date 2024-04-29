@@ -34,3 +34,10 @@ text-align: start;
   font-weight: 100;
   font-style: normal;
 `;
+
+export const Image = styled.img`
+  width: 20rem;
+  height: 13rem;
+  margin: 0;
+  border-radius: 4rem;
+`;

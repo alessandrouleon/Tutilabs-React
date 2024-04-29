@@ -16,17 +16,17 @@ import ArrowBack from "../../assets/ArrowBack.png";
 import { arrayA, arrayB, ImageProps } from '../../utils/imageTechnology';
 import { useEffect, useRef, useState } from "react";
 import { COLORS } from "../../themes/colors";
+import { useItemContext } from '../../context/ItemContext'; 
 
 export function TechnologyButton() {
     const [currentArray, setCurrentArray] = useState<ImageProps[]>([]);
     const [selectedButton, setSelectedButton] = useState<'A' | 'B'>('A');
     const containerRef = useRef<HTMLDivElement>(null);
-
     const [scrollPosition, setScrollPosition] = useState<number>(0);
     const [clickCount, setClickCount] = useState(0);
     const [isStateScrollRight, setIsStateScrollRight] = useState(false);
     const [isStateScrollLeft, setIsStateScrollLeft] = useState(false);
-
+    const { setClickedItemInfo } = useItemContext();
 
     const handleScrollLeft = () => {
         if (clickCount >= arrayB.length || clickCount < arrayB.length + 1 || clickCount < arrayB.length + 2) {
@@ -59,14 +59,21 @@ export function TechnologyButton() {
     }, []);
 
     const handleClickArrayA = () => {
+        setClickedItemInfo(null);
         setCurrentArray(arrayA);
         setSelectedButton('A');
     };
 
     const handleClickArrayB = () => {
+        setClickedItemInfo(null);
         setCurrentArray(arrayB);
         setSelectedButton('B');
     };
+
+    const handleItemClick = (itemName: string, itemDescription: string) => {
+        setClickedItemInfo({ name: itemName, description: itemDescription });
+    };
+
 
     return (
         <Container>
@@ -108,7 +115,7 @@ export function TechnologyButton() {
                     {currentArray.length > 0 ? (
                         currentArray.map((item) => (
                             <div key={item.id}>
-                                <button>
+                                <button onClick={() => handleItemClick(item.name, item.description)}>
                                     <Image src={item.image_url} alt={item.name} />
                                 </button>
                             </div>
@@ -125,10 +132,7 @@ export function TechnologyButton() {
                         </ArrwForwardButton>
                         : null}
                 </ImageGroup>
-
-
             </NavigationButtonSelection>
-            {/* <p>Total de cliques no botão: {clickCount}</p> */}
         </Container>
     );
 }

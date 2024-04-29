@@ -18,7 +18,7 @@ export function InformtionCard() {
                 <StyledDivider />
                 <TextInformation className="textInformation">
                     {clickedItemInfo === null ?
-                        <Image src={TecnologiaImage} alt="TecnologiaImage" />
+                        <Image className="image" src={TecnologiaImage} alt="TecnologiaImage" />
                         : clickedItemInfo?.description}
                 </TextInformation>
             </Container>

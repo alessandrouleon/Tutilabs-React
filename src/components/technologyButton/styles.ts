@@ -133,8 +133,8 @@ export const ImageArrwBack = styled.img`
 `;
 
 export const MediaQuery = styled.div`
-  width: 22.4rem;
   @media (max-width: 393px) {
+    width: 22.4rem;
     .navigationButtonSelection {
       width: 22rem;
       height: 5.4rem;
@@ -201,4 +201,74 @@ export const MediaQuery = styled.div`
       border-radius: 0 4rem 4rem 0;
     }
   }
+
+  @media (min-width: 394px) and (max-width: 1279px) {
+    max-width: 47rem;
+    .navigationButtonSelection {
+      width: 45.5rem;
+      height: 5.4rem;
+    }
+
+    .titleButtonsBackFront {
+     max-width: 45.5rem;
+    }
+
+    .imageGroup {
+      display: flex;
+      flex-direction: row;
+      max-width: 45.5rem;
+      margin-left: 0.5rem;
+      margin-right: 0;
+    }
+
+    .buttonGroup {
+      max-width: 4.5rem;
+      max-height: 4.5rem;
+      margin-right: 1rem;
+      border-radius: 50rem;
+      cursor: pointer;
+    }
+
+    .imagem {
+      max-width: 4.5rem;
+      max-height: 4.5rem;
+      margin-right: 1rem;
+      border-radius: 4rem;
+      transition: filter 0.3s ease;
+    }
+
+    .arrwBackButton {
+      position: absolute;
+      max-width: 4.6rem;
+      max-height: 5.4rem;
+      left: 0;
+      margin-top: -0.5rem;
+      border-radius: 4rem 0 0 4rem;
+    }
+
+    .imageArrwBack {
+      position: relative;
+      max-width: 4.5rem;
+      max-height: 5.4rem;
+      border-radius: 4rem 0 0 4rem;
+      left: 0;
+    }
+
+    .arrwForwardButton {
+      max-width: 4.6rem;
+      max-height: 5.4rem;
+      right: 0;
+      margin-top: -0.5rem;
+      border-radius: 0 4rem 4rem 0;
+      margin-right: 0;
+      left: 41rem;
+    }
+
+    .imageArrwForward {
+      max-width: 4.5rem;
+      max-height: 5.4rem;
+      border-radius: 0 4rem 4rem 0;
+    }
+  }
+
 `;

@@ -50,13 +50,33 @@ export const Image = styled.img`
 `;
 
 export const MediaQuery = styled.div`
-  padding: 1rem 0 0 0;
-  margin: 0;
-  width: 22.3rem;
   @media (max-width: 393px) {
+    padding: 1rem 0 0 0;
+    margin: 0;
+    width: 22.3rem;
     .textInformation {
       text-align: start;
       padding: 1rem;
     }
   }
+
+  @media (min-width: 394px) and (max-width: 768px) {
+    padding: 1rem 0 0 0;
+    margin: 0;
+    width: 45rem;
+    .textInformation {
+      width: 40.5rem;
+      text-align: start;
+      padding: 1rem;
+      margin-left: 2rem;
+    }
+
+    .image {
+      align-items:  center;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-left: 10rem;
+    }
+  }
+
 `;

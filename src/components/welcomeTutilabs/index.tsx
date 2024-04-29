@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Hello from "../../assets/Group 2.png"
-import { Container, Image, Welcome } from "./styles";
+import { Container,  HandImage,  Welcome } from "./styles";
 
 export function WelcomeTutilabs() {
 
@@ -12,7 +12,7 @@ export function WelcomeTutilabs() {
             <Welcome fontSize={80} mt={-4}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                     Tutilabs
-                    <Image src={Hello} alt="Hello" />
+                    <HandImage src={Hello} alt="Hello" />
                 </Box>
             </Welcome>
 

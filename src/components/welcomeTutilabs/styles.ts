@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { COLORS } from "../../themes/colors";
 import { Typography } from "@mui/material";
 
@@ -14,9 +14,22 @@ export const Welcome = styled(Typography)`
   color: ${COLORS.PRIMARY_BASE};
 `;
 
-export const Image = styled.img`
-  display: block;
-  padding: 0;
-  margin: 0;
-  margin-left: 1rem;
+const waveAnimation = keyframes`
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(20deg); }
+  100% { transform: rotate(0deg); }
+`;
+
+export const HandImage = styled.img`
+  display: flex;
+  width: 4.622rem;
+  height: 4.514rem;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0.291rem 0.437rem;
+  gap: 1.456rem;
+  isolation: isolate;
+  animation: ${waveAnimation} 2s ease-in-out infinite;
 `;

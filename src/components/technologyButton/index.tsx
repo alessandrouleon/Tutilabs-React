@@ -58,7 +58,7 @@ export function TechnologyButton() {
 
     useEffect(() => {
         setCurrentArray(arrayA);
-    }, []);
+    }, [scrollPosition]);
 
     const handleClickArrayA = () => {
         setClickedItemInfo(null);

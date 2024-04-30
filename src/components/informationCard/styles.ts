@@ -72,11 +72,34 @@ export const MediaQuery = styled.div`
     }
 
     .image {
-      align-items:  center;
+      align-items: center;
       justify-content: center;
       margin-top: 2rem;
       margin-left: 10rem;
     }
   }
 
+  @media (width: 1920px) {
+    padding: 1.5rem 0 0 0;
+    margin: 0;
+    width: 35rem;
+
+    .textInformation {
+      width: 30rem;
+      text-align: start;
+      padding: 1rem;
+      margin-left: 2rem; 
+    }
+    
+
+    .image {
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      padding-left: 7rem;
+      width: 20rem;
+      height: 10rem;
+      margin: 0;
+    }
+  }
 `;

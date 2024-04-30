@@ -175,5 +175,46 @@ export const MediaQuery = styled.div`
       left: 70%;
     }
   }
+  
+  ////
+  @media (width: 1920px) {
+    width: 30rem;
+    margin-top: 2rem;
+    background: ${COLORS.PORPLE_DARK};
+    border-radius: 1.5rem;
+    border: none;
+  
 
+    .backgroundImageGrid {
+      width: 30rem;
+      height: 15rem;
+    }
+
+    .imageGrad {
+      width: 30rem;
+      height: 15.424rem;
+    }
+
+    .nformationSeeWebsite {
+      margin: 0;
+      padding: 1rem;
+      position: absolute;
+      width: 30rem;
+      height: 7.563rem;
+      bottom: 0;
+    }
+
+    .more-about-website {
+      display: flex;
+      width: 28rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttonView {
+      height: 2.1rem;
+      margin-top: 0rem;
+      left: 40%;
+    }
+  }
 `;

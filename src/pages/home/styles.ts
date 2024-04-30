@@ -69,4 +69,22 @@ export const MediaQuery = styled.div`
     }
   }
 
+  @media  (width: 1920px) {
+    .gridBody {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      padding: 0 1rem 1rem 1rem;
+      gap: 1rem;
+    }
+
+    .subCardsGrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      padding: 0 0rem 1rem 0;
+      gap: 1rem;
+    }
+  }
+
 `;

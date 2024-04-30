@@ -5,8 +5,8 @@ import { Divider, Typography } from "@mui/material";
 export const Container = styled.div`
   position: relative;
   padding: 0;
-  margin: 0;
-  height: 19rem;
+  margin: 1rem 0 0 0;
+  height: 18.875rem;
   background: ${COLORS.BACKGROUND_BASE};
   border-radius: 1.5rem;
   border: solid 1px ${COLORS.BLACK_COLOR};

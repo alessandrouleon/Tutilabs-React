@@ -202,7 +202,7 @@ export const MediaQuery = styled.div`
     }
   }
 
-  @media (min-width: 394px) and (max-width: 1279px) {
+  @media (min-width: 394px) and (max-width: 768px) {
     max-width: 47rem;
     .navigationButtonSelection {
       width: 45.5rem;

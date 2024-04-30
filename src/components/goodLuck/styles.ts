@@ -79,10 +79,10 @@ export const MediaQuery = styled.div`
     }
   }
 
-  ///
+  
   @media (min-width: 394px) and (max-width: 768px) {
     .containerBackground {
-      max-width: 46rem;
+      width: 46rem;
       padding-right: 2rem;
     }
 

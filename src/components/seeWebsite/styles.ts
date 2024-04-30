@@ -99,7 +99,6 @@ export const VectorImage = styled.img`
 export const MediaQuery = styled.div`
    @media (max-width: 393px) {
     width: 22.3rem;
-    border: solid 1px blue;
     background: ${COLORS.PORPLE_DARK};
     border-radius: 1.5rem;
     border: none;
@@ -137,9 +136,8 @@ export const MediaQuery = styled.div`
     }
   }
 
-  @media (min-width: 394px) and (max-width: 1279px) {
+  @media (min-width: 394px) and (max-width: 768px) {
     width: 45rem;
-    border: solid 1px blue;
     background: ${COLORS.PORPLE_DARK};
     border-radius: 1.5rem;
     border: none;
